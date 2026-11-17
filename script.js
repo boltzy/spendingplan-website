@@ -13,7 +13,6 @@ function render() {
     week.innerHTML = changed ? `<span class="previous-amount">was £200</span> £${amounts[index]}` : '£200';
   });
   extra.textContent = active ? '+ £50 top-up' : '';
-  button.setAttribute('aria-pressed', String(active));
   button.innerHTML = active ? 'Reset example <span aria-hidden="true">↺</span>' : 'Bring £50 forward <span aria-hidden="true">→</span>';
   status.textContent = active ? `After top-up: £550 remains in Future Weeks; Buffer stays £200. ${spread ? 'The reduction is spread across three weeks.' : 'The reduction comes from Week 4.'}` : 'Before top-up: £600 remains in Future Weeks.';
 }
