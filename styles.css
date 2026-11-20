@@ -134,3 +134,7 @@
 
 .how .steps { margin-bottom: 42px; }
 .hero h1 { letter-spacing: -.045em; }
+
+/* Keep the pots definition in the introduction and align both columns at the top. */
+.pots-grid{align-items:start}
+@media(min-width:801px){.pots{padding-block:108px}.pots .section-heading{margin-bottom:30px}}
