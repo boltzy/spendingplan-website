@@ -35,3 +35,15 @@ function renderWizard() {
 wizardBack.addEventListener('click', () => { if (wizardStep > 0) { wizardStep--; renderWizard(); } });
 wizardNext.addEventListener('click', () => { wizardStep = (wizardStep + 1) % wizardPages.length; renderWizard(); });
 renderWizard();
+
+// Native playback stays available if JavaScript is disabled.
+const tourVideo = document.querySelector('.tour-player video');
+const tourPlay = document.querySelector('.tour-play');
+if (tourVideo && tourPlay) {
+  tourPlay.hidden = false;
+  tourPlay.addEventListener('click', () => {
+    tourVideo.play().catch(() => { tourPlay.hidden = false; });
+  });
+  tourVideo.addEventListener('play', () => { tourPlay.hidden = true; });
+  tourVideo.addEventListener('ended', () => { tourPlay.hidden = false; });
+}

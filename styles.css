@@ -138,3 +138,19 @@
 /* Keep the pots definition in the introduction and align both columns at the top. */
 .pots-grid{align-items:start}
 @media(min-width:801px){.pots{padding-block:108px}.pots .section-heading{margin-bottom:30px}}
+
+/* Ad-free, click-to-play product tour; no third-party player or requests. */
+.video-tour{padding-top:85px;padding-bottom:85px}
+.video-tour .section-heading{margin-bottom:32px}
+.tour-player{margin:0}
+.tour-player video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:var(--bg);border:1px solid var(--line);border-radius:18px}
+.tour-player video:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+.tour-player figcaption{margin-top:14px;color:var(--secondary);font-size:13px;line-height:1.6}
+.tour-transcript{margin-top:24px;border-block:1px solid var(--line);padding:16px 0;color:var(--muted)}
+.tour-transcript summary{cursor:pointer;font-weight:650;color:var(--text);min-height:28px}
+.tour-transcript>div{max-width:780px;padding-top:20px;line-height:1.75}
+.tour-transcript>div p:last-child{margin-bottom:4px}
+@media(max-width:650px){.video-tour{padding-block:60px}.tour-player video{border-radius:10px}.hero .actions{flex-wrap:wrap;row-gap:18px}.tour-player figcaption{font-size:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.tour-media{position:relative}.tour-play{position:absolute;inset:50% auto auto 50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:14px;white-space:nowrap;padding:16px 24px;border:1px solid var(--blue);border-radius:999px;background:#233d56f5;box-shadow:0 8px 32px #0009;color:white;font-size:17px;font-weight:700;cursor:pointer}.tour-play[hidden]{display:none}.tour-play:hover{background:#385b7b}.tour-play small{color:#d2dade;font-size:13px;font-weight:500}@media(max-width:650px){.tour-play{padding:12px 17px;gap:10px;font-size:14px}}
